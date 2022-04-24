@@ -23,7 +23,7 @@ const AddTodo = () => {
   return (
       
     <div>
-        <IconButton sx={{marginLeft: '480px', backgroundColor: '#0055b3', position: 'fixed', top: '600px'}} onClick={handleClickOpen}  aria-label="delete" size="large">
+        <IconButton sx={{marginLeft: '77%', hover:'none', backgroundColor: '#0055b3', position: 'fixed', top: '600px'}} onClick={handleClickOpen}  aria-label="delete" size="large">
             <AddIcon sx={{color: 'white'}} fontSize="inherit" />
         </IconButton>
         <Dialog
@@ -31,7 +31,7 @@ const AddTodo = () => {
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            sx={{width:'450px', margin:'auto'}}
+            sx={{width:'99%', margin:'auto'}}
         >
             <DialogTitle id="alert-dialog-title">
                 {"Add Todo"}
