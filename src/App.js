@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Box sx= {{
         margin: 'auto',
-        width: '30%',
-        marginTop:'25px',
+        width: '600px',
+        marginTop:'50px',
         height: '700px',
         boxShadow: 5,
         overflow: 'auto'

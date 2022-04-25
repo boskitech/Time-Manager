@@ -14,7 +14,7 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <Box sx={{ flexGrow:1, position:'fixed', width:'30%', zIndex:'999'}}>
+    <Box sx={{ position:'fixed', width:'600px', zIndex:'999'}}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

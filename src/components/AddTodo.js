@@ -6,6 +6,7 @@ import IconButton from '@mui/material/IconButton';
 import Dialog from '@mui/material/Dialog';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 
 
 const AddTodo = ({addTodo}) => {
@@ -32,15 +33,26 @@ const AddTodo = ({addTodo}) => {
     
   return (
     <div>
-        <IconButton sx={{marginLeft: '77%', hover:'none', backgroundColor: '#0055b3', position: 'fixed', top: '600px'}} onClick={handleClickOpen}  aria-label="delete" size="large">
-            <AddIcon sx={{color: 'white'}} fontSize="inherit" />
-        </IconButton>
+        <Tooltip title="Add Todo">
+            <IconButton sx={{marginLeft: '520px', 
+                            hover:'none', 
+                            backgroundColor: '#0055b3', 
+                            position: 'fixed', 
+                            top: '650px',
+                            "&:hover": { backgroundColor: "#0077b3" }  
+                        }} 
+                        onClick={handleClickOpen}  
+                        aria-label="delete" 
+                        size="large">
+                <AddIcon sx={{color: 'white'}} fontSize="inherit" />
+            </IconButton>
+        </Tooltip>
         <Dialog
             open={open}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
-            sx={{width:'99%', margin:'auto'}}
+            sx={{width:'550px', margin:'auto'}}
         >
             <DialogTitle id="alert-dialog-title">
                 {"Add Todo"}
