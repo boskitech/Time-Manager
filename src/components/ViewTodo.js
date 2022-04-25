@@ -3,17 +3,14 @@ import { useParams } from "react-router-dom";
 import { CardContent } from "@mui/material"
 import { Typography } from "@mui/material"
 // import { getTodos } from './data';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
-import Tooltip from '@mui/material/Tooltip';
 import { useEffect, useState } from "react";
 
 const ViewTodo = () => {
     let params = useParams()
-    //   let todos = getTodos()
     let id = parseInt(params.id)
-
+    //   let todos = getTodos()
     //   const todo = todos.find(todo => todo.id === id)
+
     const[todo, setTodos] = useState([])
 
     const fetchTodo = async () => {
@@ -22,7 +19,6 @@ const ViewTodo = () => {
 
         setTodos(data)
     }
-
 
     useEffect(() => {
         fetchTodo()
@@ -42,11 +38,6 @@ const ViewTodo = () => {
             </Typography>
             <Typography variant="h5" component="div" olor="text.secondary" gutterBottom>
                 {todo.name}
-                <Tooltip title="View Todo" followCursor>
-                    <IconButton sx={{float: 'right', color: 'green'}}aria-label="delete" size="small">
-                        <DeleteIcon fontSize="small" />
-                    </IconButton>
-                </Tooltip>
                 <hr sx={{borderBottom:'0px'}}/>
             </Typography>
             <Typography variant="body2">
