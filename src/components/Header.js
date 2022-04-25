@@ -14,16 +14,18 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <Box sx={{ flexGrow:1, position:'fixed', width:'95%', zIndex:'999'}}>
+    <Box sx={{ flexGrow:1, position:'fixed', width:'30%', zIndex:'999'}}>
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            <span style={{floaf: 'left'}}>
               Todo-App
+            </span>
               {
                 location.pathname !== '/' && (
                   <Tooltip title="Go back" cursor>
                     <IconButton 
-                    sx={{float: 'right', color: 'white'}}
+                    sx={{float:'right', padding:'5px 0', margin:'0', color: 'white'}}
                     aria-label="delete" 
                     size="large"
                     onClick={() => { navigate('/') }}

@@ -18,7 +18,7 @@ const Todo = ({id, name, date, deleteTodo}) => {
             boxShadow: 2,
         }}>
             <CardContent>
-                <Typography variant="h5" component="div" olor="text.secondary" gutterBottom>
+                <Typography variant="h5" component="div" gutterBottom>
                     {name}
                     <Tooltip title="View Todo" followCursor>
                         <Link to={`/todo/${id}`}>
