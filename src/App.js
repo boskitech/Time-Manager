@@ -1,10 +1,10 @@
 import './App.css';
 import Header from './components/Header'
 import Box from '@mui/material/Box'
-import Todos from './components/Todos';
-import ViewTodo from './components/ViewTodo';
+import { Outlet } from 'react-router';
 
 function App() {
+  
   return (
     <div className="App">
       <Box sx= {{
@@ -16,7 +16,7 @@ function App() {
         overflow: 'auto'
       }}>
         <Header />
-        <ViewTodo />
+      <Outlet/>
       </Box>
     </div>
   );
